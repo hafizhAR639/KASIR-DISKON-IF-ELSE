@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class IfElse {
+
+
+    public static void main(String args[]) {
+        Scanner s = new Scanner(System.in);
+        int jumlah;
+        int harga;
+        int input;
+        double total;
+        double diskonAkhir;
+        double grandTotal;
+        
+        System.out.println("Kasir  toko Tas cuci gudang berdiskon fantastis!");
+        System.out.println("Tas harga Rp.100.000,-");
+        System.out.println("Beli berapa jumlah?");
+        jumlah = s.nextInt();
+        
+        harga = 100000;
+        total = jumlah*harga;
+      
+         if (total >= 100000 && total <= 200000) {
+                    diskonAkhir = (total*0.05);
+                    System.out.println("Diskon = "+ diskonAkhir);
+                    total =total-diskonAkhir;
+                    System.out.println("Grand total = "+ total);
+                }
+                else if (total >= 200000 && total <= 300000) {
+                    diskonAkhir = (total*0.10);
+                    System.out.println("Diskon = "+ diskonAkhir);
+                    total =total-diskonAkhir;
+                    System.out.println("Grand total = "+ total);  
+                }
+                else if (total >= 300000 && total <= 400000) {
+                    diskonAkhir = (total*0.15);
+                    System.out.println("Diskon = "+ diskonAkhir);
+                    total =total-diskonAkhir;
+                    System.out.println("Grand total = "+ total);
+                }
+                else if (total >= 400001 && total <= 500000) {
+                    diskonAkhir = (total*0.20);
+                    System.out.println("Diskon = "+ diskonAkhir);
+                    total =total-diskonAkhir;
+                    System.out.println("Grand total = "+ total);
+                }
+                else if (total >= 500000) {
+                    diskonAkhir = (total*0.20);
+                    System.out.println("Diskon = "+ diskonAkhir);
+                    total =total-diskonAkhir;
+                    System.out.println("Grand total = "+ total);
+                }
+        System.out.print("Silahkan input uang Rp.");
+        input = s.nextInt();
+        if (input > total) {
+           grandTotal =  input - total;
+            System.out.println("Ini kembalian mu Rp."+ grandTotal);
+        }
+        else if (input == total) {
+            System.out.println("Uang pas");
+        }
+        else {
+            System.out.println("Uang tidak cukup / tidak valid");
+        }
+    }
+}
